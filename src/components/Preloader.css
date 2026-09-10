@@ -1,0 +1,9 @@
+.boot { position: fixed; inset: 0; z-index: 20000; background: #C9D6B6; display: grid; place-items: center; }
+.boot::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: repeating-linear-gradient(0deg, rgba(0,0,0,0.06) 0 1px, transparent 1px 3px); }
+.boot-screen { text-align: center; color: #2B3A1F; }
+.boot-logo { font-size: clamp(1.8rem, 6vw, 3.4rem); display: flex; align-items: center; gap: 0.6em; justify-content: center; letter-spacing: 0.08em; }
+.boot-logo .tm { font-size: 0.35em; align-self: flex-start; margin-left: -0.5em; }
+.boot-cat { width: 1.2em; height: 1.2em; color: #2B3A1F; }
+.boot-bar { width: min(260px, 60vw); height: 10px; border: 2px solid #2B3A1F; margin: 1.4rem auto 0.6rem; padding: 1px; }
+.boot-bar span { display: block; height: 100%; background: #2B3A1F; transition: width 0.12s steps(4); }
+.boot-hint { font-size: 0.6rem; opacity: 0.75; }

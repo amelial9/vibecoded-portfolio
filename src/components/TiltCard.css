@@ -1,0 +1,4 @@
+.tilt { position: relative; transform-style: preserve-3d; transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1); will-change: transform; --gx: 50%; --gy: 50%; }
+.tilt-glare { pointer-events: none; position: absolute; inset: 0; border-radius: inherit; opacity: 0; transition: opacity 0.4s;
+  background: radial-gradient(circle at var(--gx) var(--gy), rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0) 55%); mix-blend-mode: soft-light; }
+.tilt:hover .tilt-glare { opacity: 1; }

@@ -1,0 +1,1 @@
+.after-stack { display: flex; flex-direction: column; gap: clamp(3rem, 7vw, 5.5rem); }

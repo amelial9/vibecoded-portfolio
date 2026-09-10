@@ -1,0 +1,60 @@
+:root {
+  /* palette: warm boba-shop neutrals (from ameliali.com) + one matcha accent */
+  --paper: #FAF8F3;
+  --paper-2: #F3EEE3;
+  --ink: #473C35;
+  --ink-2: #75655A;
+  --ink-3: #A5978C;
+  --cream: #FFF7E3;
+  --sand: #F0DEBA;
+  --oat: #E8DFD0;
+  --stone: #D7D3BF;
+  --taupe: #C7BDB5;
+  --fog: #F0F0F0;
+  --mocha: #75655A;
+  --cocoa: #524740;
+  --boba: #2E211B;
+  --matcha: #9CAF88;
+  --matcha-2: #6F8A5E;
+  --peach: #F2C6A0;
+  --line: rgba(71, 60, 53, 0.14);
+  --card: #FFFFFF;
+  --shadow: 0 10px 30px -12px rgba(71, 60, 53, 0.35);
+  --shadow-soft: 0 4px 14px -6px rgba(71, 60, 53, 0.25);
+
+  --font-display: 'Fraunces', 'Times New Roman', serif;
+  --font-body: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  --font-pixel: 'Silkscreen', 'Courier New', monospace;
+
+  --radius: 18px;
+  --radius-sm: 10px;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --nav-h: 64px;
+  color-scheme: light;
+}
+
+:root[data-theme='night'] {
+  --paper: #1C1714;
+  --paper-2: #24201B;
+  --ink: #F3EBDD;
+  --ink-2: #C9BBAA;
+  --ink-3: #8C7F73;
+  --cream: #2A241F;
+  --sand: #3A302A;
+  --oat: #2E2823;
+  --stone: #3F3833;
+  --taupe: #4A413B;
+  --fog: #2A2622;
+  --mocha: #C9BBAA;
+  --cocoa: #E3D6C5;
+  --boba: #F3EBDD;
+  --matcha: #8FA67C;
+  --matcha-2: #B7C9A5;
+  --peach: #E0A97E;
+  --line: rgba(243, 235, 221, 0.14);
+  --card: #262119;
+  --shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.7);
+  --shadow-soft: 0 4px 14px -6px rgba(0, 0, 0, 0.5);
+  color-scheme: dark;
+}

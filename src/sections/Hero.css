@@ -1,0 +1,45 @@
+.hero { position: relative; min-height: 100svh; display: flex; align-items: center; padding: calc(var(--nav-h) + 3rem) 0 4rem; overflow: hidden; isolation: isolate; --mx: 50%; --my: 40%; }
+.hero-bg { position: absolute; inset: -10%; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(40% 45% at var(--mx) var(--my), color-mix(in srgb, var(--sand) 85%, transparent), transparent 70%),
+    radial-gradient(35% 40% at calc(100% - var(--mx) * 0.5) calc(100% - var(--my) * 0.6), color-mix(in srgb, var(--matcha) 35%, transparent), transparent 70%),
+    radial-gradient(30% 35% at 20% 85%, color-mix(in srgb, var(--peach) 45%, transparent), transparent 70%);
+  filter: blur(30px); transition: background 0.3s; }
+.boba-canvas { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
+.hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr; gap: 2.5rem; align-items: center; }
+.hero-eyebrow { margin-bottom: 0.6rem; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: none; }
+.hero-name { font-size: clamp(4.2rem, 15vw, 11.5rem); line-height: 0.88; font-weight: 600; letter-spacing: -0.045em; display: flex; flex-direction: column; font-variation-settings: 'SOFT' 100, 'opsz' 144; }
+.hero-word { display: flex; }
+.hero-charwrap { display: inline-block; overflow: hidden; padding-bottom: 0.06em; margin-bottom: -0.06em; }
+.hero-char { display: inline-block; will-change: transform; }
+.hero-dot { color: var(--matcha-2); }
+.hero-role { margin-top: 1.4rem; font-size: clamp(1.2rem, 2.6vw, 1.7rem); font-family: var(--font-display); font-style: italic; color: var(--ink-2); min-height: 1.4em; }
+.hero-role-word { color: var(--ink); font-weight: 600; font-style: normal; }
+.caret { display: inline-block; margin-left: 2px; animation: blink 1s steps(2) infinite; font-weight: 300; }
+@keyframes blink { 50% { opacity: 0; } }
+.hero-sub { margin-top: 1rem; max-width: 44ch; color: var(--ink-2); font-size: 1.02rem; }
+.hero-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.8rem; margin-top: 2rem; }
+.hero-socials { display: flex; gap: 0.3rem; margin-left: 0.4rem; }
+.hero-socials a { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; transition: background 0.3s; }
+.hero-socials a:hover { background: var(--oat); }
+.hero-socials img { width: 24px; height: 24px; }
+:root[data-theme='night'] .hero-socials img { filter: invert(1); }
+.hero-side { display: flex; flex-direction: column; align-items: center; gap: 1.4rem; justify-self: center; }
+.sticker { position: relative; width: clamp(200px, 26vw, 300px); aspect-ratio: 1; display: grid; place-items: center; }
+.sticker-ring { position: absolute; inset: 0; animation: spin 24s linear infinite; }
+.sticker-ring text { font-family: var(--font-body); font-size: 12.4px; font-weight: 600; letter-spacing: 0.22em; fill: var(--ink-2); text-transform: uppercase; }
+.sticker-img { width: 68%; border-radius: 50%; background: var(--cream); border: 2px solid var(--ink); box-shadow: 0 20px 40px -20px rgba(71, 60, 53, 0.5); transition: transform 0.5s var(--ease-spring); }
+.sticker:hover .sticker-img { transform: scale(1.06) rotate(-5deg); }
+.sticker:hover .sticker-ring { animation-duration: 6s; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.hero-note { display: flex; gap: 0.8rem; align-items: center; font-size: 0.6rem; color: var(--ink-2); }
+.hero-note button { font: inherit; padding: 0.35rem 0.6rem; border: 1px dashed var(--ink-3); border-radius: 6px; color: var(--ink); transition: background 0.3s; }
+.hero-note button:hover { background: var(--sand); }
+.hero-scroll { position: absolute; bottom: 1.6rem; left: 50%; transform: translateX(-50%); width: 22px; height: 36px; border: 1.5px solid var(--ink-3); border-radius: 12px; z-index: 1; }
+.hero-scroll span { position: absolute; left: 50%; top: 6px; width: 3px; height: 8px; margin-left: -1.5px; border-radius: 2px; background: var(--ink); animation: wheel 1.8s ease-in-out infinite; }
+@keyframes wheel { 0% { transform: translateY(0); opacity: 1; } 70% { transform: translateY(14px); opacity: 0; } 100% { transform: translateY(0); opacity: 0; } }
+
+@media (min-width: 900px) {
+  .hero-grid { grid-template-columns: 1.35fr 1fr; }
+  .hero-side { justify-self: end; }
+}

@@ -1,0 +1,18 @@
+.cursor-cat {
+  position: fixed; top: 0; left: 0; width: 30px; height: 30px; pointer-events: none; z-index: 10001;
+  opacity: 0; transition: opacity 0.2s; will-change: transform; user-select: none;
+}
+:root[data-theme='night'] .cursor-cat { filter: invert(1) hue-rotate(180deg); }
+.cursor-ring {
+  position: fixed; top: 0; left: 0; width: 44px; height: 44px; border-radius: 50%; pointer-events: none; z-index: 10000;
+  border: 1.5px solid var(--ink); opacity: 0; will-change: transform;
+  transition: width 0.3s var(--ease-spring), height 0.3s var(--ease-spring), background 0.3s, border-color 0.3s, opacity 0.2s, border-radius 0.3s;
+  display: grid; place-items: center;
+}
+.cursor-ring.is-hover { width: 64px; height: 64px; background: color-mix(in srgb, var(--sand) 55%, transparent); border-color: transparent; }
+.cursor-ring.is-down { width: 36px; height: 36px; }
+.cursor-ring.is-text { width: 6px; height: 40px; border-radius: 3px; background: var(--ink); border-color: transparent; }
+.cursor-ring.is-grab { width: 70px; height: 70px; border-style: dashed; }
+.cursor-ring.has-label { width: auto; height: auto; padding: 0.5rem 0.9rem; border-radius: 999px; background: var(--ink); border-color: var(--ink); }
+.cursor-label { font-family: var(--font-pixel); font-size: 0.6rem; color: var(--paper); white-space: nowrap; display: none; }
+.cursor-ring.has-label .cursor-label { display: block; }
